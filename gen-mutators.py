@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 
+import os
 import pathlib
 import re
 from operators import (
     REGEX_OPERATORS
 )
-from config import (
-    FILES_TO_MUTATE,
-    BITCOIN_CORE_PATH
-)
 from utils import mkdir_mutation_folder, replace_value
+FILES_TO_MUTATE = [os.environ.get('FILES_TO_MUTATE')]
+BITCOIN_CORE_PATH = os.environ.get('BITCOIN_CORE_PATH')
 
 
 BASE_PATH = str(pathlib.Path().resolve())
